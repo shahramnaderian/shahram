@@ -1,106 +1,83 @@
 &lt;!DOCTYPE html&gt;
-    &lt;html lang="fa" dir="rtl"&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8"&gt;
-        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-        &lt;title&gt;کوهستان‌های کردستان&lt;/title&gt;
-        &lt;style&gt;
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-            body {
-                font-family: Tahoma, 'Segoe UI', Arial, sans-serif;
-                background-color: #1a2e1a;
-                color: #e8e0d0;
-                min-height: 100vh;
-                padding: 2rem 1rem;
-            }
-            h1 {
-                text-align: center;
-                font-size: 2rem;
-                color: #d4c5a9;
-                margin-bottom: 2rem;
-                letter-spacing: 1px;
-            }
-            .gallery {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 1.5rem;
-                max-width: 1200px;
-                margin: 0 auto;
-            }
-            @media (max-width: 768px) {
-                .gallery {
-                    grid-template-columns: 1fr;
-                }
-                h1 {
-                    font-size: 1.5rem;
-                }
-            }
-            .card {
-                background-color: #2a3e2a;
-                border-radius: 8px;
-                overflow: hidden;
-                box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-                transition: transform 0.2s;
-            }
-            .card:hover {
-                transform: translateY(-4px);
-            }
-            .card img {
-                width: 100%;
-                height: 300px;
-                object-fit: cover;
-                display: block;
-                aspect-ratio: 3/2;
-            }
-            .card figcaption {
-                padding: 1rem;
-                text-align: center;
-                font-size: 1.1rem;
-                color: #c8c0a8;
-            }
-            .attribution {
-                text-align: center;
-                margin-top: 2rem;
-                font-size: 0.9rem;
-                color: #8a8070;
-            }
-            .attribution a {
-                color: #a0b890;
-                text-decoration: underline;
-            }
-            .attribution a:hover {
-                color: #c8e0b0;
-            }
-        &lt;/style&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1&gt;کوهستان‌های کردستان&lt;/h1&gt;
-        &lt;div class="gallery"&gt;
-            &lt;figure class="card"&gt;
-                &lt;img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Mountains_of_Kurdistan.jpg" alt="کوهستان‌های کردستان" loading="lazy" width="600" height="400" style="object-fit: cover;"&gt;
-                &lt;figcaption&gt;کوهستان‌های کردستان&lt;/figcaption&gt;
-            &lt;/figure&gt;
-            &lt;figure class="card"&gt;
-                &lt;img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Kurdistan_landscape.jpg" alt="چشم‌انداز کوهستانی کردستان" loading="lazy" width="600" height="400" style="object-fit: cover;"&gt;
-                &lt;figcaption&gt;بهار در کوهستان‌های کردستان&lt;/figcaption&gt;
-            &lt;/figure&gt;
-            &lt;figure class="card"&gt;
-                &lt;img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Mountains_of_Kurdistan_in_spring%D8%8C.jpg" alt="کوهستان کردستان در بهار" loading="lazy" width="600" height="400" style="object-fit: cover;"&gt;
-                &lt;figcaption&gt;چشم‌انداز کوهستانی کردستان&lt;/figcaption&gt;
-            &lt;/figure&gt;
-        &lt;/div&gt;
-        &lt;p class="attribution"&gt;
-            عکس ۱: خوش‌هت، تحت مجوز CC BY-SA 4.0 |&lt;br&gt;
-            &lt;a href="https://commons.wikimedia.org/wiki/File:Mountains_of_Kurdistan.jpg"&gt;صفحه فایل &lt;/a&gt; |&lt;br&gt;
-            عکس ۲: نورا بتوكی-گونزی، تحت مجوز CC BY-SA 4.0 |&lt;br&gt;
-            &lt;a href="https://commons.wikimedia.org/wiki/File:Kurdistan_landscape.jpg"&gt;صفحه فایل &lt;/a&gt; |&lt;br&gt;
-            عکس ۳: خوش‌هت، تحت مجوز CC BY-SA 4.0 |&lt;br&gt;
-            &lt;a href="https://commons.wikimedia.org/wiki/File:Mountains_of_Kurdistan_in_spring،.jpg"&gt;صفحه فایل &lt;/a&gt; |&lt;br&gt;
-            &lt;a href="https://creativecommons.org/licenses/by-sa/4.0/"&gt;CC BY-SA 4.0&lt;/a&gt;
-        &lt;/p&gt;
-    &lt;/body&gt;
+&lt;html lang="fa" dir="rtl"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;کوهستان‌های کردستان&lt;/title&gt;
+&lt;style&gt;
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: Tahoma, 'Segoe UI', Arial, sans-serif;
+background-color: #1a2e1a;
+color: #e8e0d0;
+min-height: 100vh;
+padding: 2rem 1rem;
+}
+h1 {
+text-align: center;
+font-size: 2rem;
+color: #d4c5a9;
+margin-bottom: 2rem;
+letter-spacing: 1px;
+}
+.gallery {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 1.5rem;
+max-width: 1200px;
+margin: 0 auto;
+}
+@media (max-width: 768px) {
+.gallery {
+grid-template-columns: 1fr;
+}
+h1 {
+font-size: 1.5rem;
+}
+}
+.card {
+background-color: #2a3e2a;
+border-radius: 8px;
+overflow: hidden;
+box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+transition: transform 0.2s;
+}
+.card:hover {
+transform: translateY(-4px);
+}
+.card img {
+width: 100%;
+height: 300px;
+object-fit: cover;
+display: block;
+aspect-ratio: 3/2;
+}
+.card figcaption {
+padding: 1rem;
+text-align: center;
+font-size: 1.1rem;
+color: #c8c0a8;
+}
+.attribution {
+text-align: center;
+margin-top: 2rem;
+font-size: 0.9rem;
+color: #8a8070;
+}
+.attribution a {
+color: #a0b890;
+text-decoration: underline;
+}
+.attribution a:hover {
+color: #c8e0b0;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;کوهستان‌های کردستان&lt;/h1&gt;
+&lt;/body&gt;
 &lt;/html&gt;
