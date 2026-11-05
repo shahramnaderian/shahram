@@ -1,50 +1,49 @@
-&lt;!DOCTYPE html&gt;
-&lt;html lang="fa" dir="rtl"&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8"&gt;
-&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-&lt;title&gt;تصاویر کردستان&lt;/title&gt;
-&lt;style&gt;
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تصاویر کردستان | Kurdistan Gallery</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Tahoma,Arial,sans-serif;background:#1a2e1a;color:#e8e0d0;min-height:100vh;padding:2rem 1rem}
+header{max-width:900px;margin:0 auto 2rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+h1{text-align:center;font-size:2rem;color:#d4c5a9}
+.lang{display:flex;gap:.5rem}
+button{border:1px solid #d4c5a9;background:transparent;color:#e8e0d0;padding:.55rem .9rem;border-radius:8px;cursor:pointer;font-size:.95rem}
+button.active,button:hover{background:#d4c5a9;color:#1a2e1a}
+.image-container{max-width:800px;margin:0 auto;text-align:center}
+img{max-width:100%;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+p{margin-top:1rem;font-size:1.2rem;color:#c8b89a;line-height:1.8}
+footer{margin:3rem auto 0;text-align:center;color:#a9a08d;font-size:.9rem}
+@media(max-width:520px){header{justify-content:center}h1{width:100%;font-size:1.6rem}}
+</style>
+</head>
+<body>
+<header>
+  <h1 id="title">تصاویر کردستان</h1>
+  <nav class="lang" aria-label="Language">
+    <button id="faBtn" class="active" type="button" onclick="setLanguage('fa')">فارسی</button>
+    <button id="enBtn" type="button" onclick="setLanguage('en')">English</button>
+  </nav>
+</header>
+<main class="image-container">
+  <img src="kurdistan-photo.jpg" alt="منظره‌ای از کردستان" id="photo">
+  <p id="caption">مناظر زیبای سرزمین کردستان</p>
+</main>
+<footer id="footer">به وب‌سایت شخصی من خوش آمدید</footer>
+<script>
+function setLanguage(language){
+  const isEnglish = language === 'en';
+  document.documentElement.lang = language;
+  document.documentElement.dir = isEnglish ? 'ltr' : 'rtl';
+  document.getElementById('title').textContent = isEnglish ? 'Kurdistan Gallery' : 'تصاویر کردستان';
+  document.getElementById('photo').alt = isEnglish ? 'A beautiful landscape in Kurdistan' : 'منظره‌ای از کردستان';
+  document.getElementById('caption').textContent = isEnglish ? 'The beautiful landscapes of Kurdistan' : 'مناظر زیبای سرزمین کردستان';
+  document.getElementById('footer').textContent = isEnglish ? 'Welcome to my personal website' : 'به وب‌سایت شخصی من خوش آمدید';
+  document.getElementById('faBtn').classList.toggle('active', !isEnglish);
+  document.getElementById('enBtn').classList.toggle('active', isEnglish);
 }
-body {
-  font-family: Tahoma, Arial, sans-serif;
-  background-color: #1a2e1a;
-  color: #e8e0d0;
-  min-height: 100vh;
-  padding: 2rem 1rem;
-}
-h1 {
-  text-align: center;
-  font-size: 2rem;
-  color: #d4c5a9;
-  margin-bottom: 2rem;
-}
-.image-container {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-img {
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-p {
-  margin-top: 1rem;
-  font-size: 1.2rem;
-  color: #c8b89a;
-}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;تصاویر کردستان&lt;/h1&gt;
-  &lt;div class="image-container"&gt;
-    &lt;img src="kurdistan-photo.jpg" alt="تصویر کردستان"&gt;
-    &lt;p&gt;مناظر زیبای سرزمین کردستان&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+</script>
+</body>
+</html>
